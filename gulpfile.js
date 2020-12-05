@@ -35,7 +35,8 @@ gulp.task(`clean`, function () {
 gulp.task(`copy`, function () {
   return gulp.src([
     `source/fonts/**`,
-    `source/img/**/*`,
+    `source/img/**`,
+    `source/local/templates/b2c/build/img/**/*`,
     `source/css/external.css`,
     `source/css/internal.css`,
     `source/js/external.js`,
