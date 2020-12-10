@@ -1,3 +1,0 @@
-<?
-$sSectionName="midea-ultimate-comfort";
-?>
