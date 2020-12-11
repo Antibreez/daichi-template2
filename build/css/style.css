@@ -1141,29 +1141,126 @@ body.js__body-no-scroll {
   overflow: hidden;
 }
 
-.button {
+.btn-primary,
+.btn-secondary {
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
-  color: #444;
   display: inline-block;
-  height: 48px;
+  height: auto;
   padding: 15px 40px;
-  color: #fff;
+  margin: 0;
   text-decoration: none;
   border: none;
   border-radius: 5px;
-  background-color: #00adef;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
-.button:hover {
+.btn-primary {
+  background-color: #00adef;
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
   background-color: #4687e0;
   color: #fff;
 }
 
-.button:active {
+.btn-primary:active {
   background-color: #095aad;
   color: #fff;
+}
+
+.btn-primary:disabled {
+  background-color: #dadada;
+  color: #fff;
+}
+
+.btn-secondary {
+  padding: 14px 39px;
+  border: 1px solid #eee;
+  background-color: transparent;
+  color: #444;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  border-color: #00adef;
+  color: #00adef;
+  background-color: transparent;
+}
+
+.btn-secondary:active {
+  border-color: #095aad;
+  color: #095aad;
+  background-color: transparent;
+}
+
+.btn-secondary:disabled {
+  border-color: #dadada;
+  color: #dadada;
+  background-color: transparent;
+}
+
+.btn-text,
+.btn-menu {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  display: inline;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: #00adef;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.btn-text:hover, .btn-text:focus,
+.btn-menu:hover,
+.btn-menu:focus {
+  color: #4687e0;
+  background-color: transparent;
+}
+
+.btn-text:active,
+.btn-menu:active {
+  color: #095aad;
+  background-color: transparent;
+}
+
+.btn-text:disabled,
+.btn-menu:disabled {
+  color: #dadada;
+  background-color: transparent;
+}
+
+.btn-menu {
+  font-weight: 300;
+  color: #444;
+}
+
+.btn-menu:hover, .btn-menu:focus {
+  color: #00adef;
+}
+
+.btn-menu:active {
+  color: #00adef;
+}
+
+@media (max-width: 479px) {
+  .btn-primary,
+  .btn-secondary {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+  }
 }
 
 .modal {

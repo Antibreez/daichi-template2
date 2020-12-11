@@ -1,16 +1,24 @@
-.button {
+.btn-primary,
+.btn-secondary {
   @include h15;
 
   display: inline-block;
-  height: 48px;
+  height: auto;
   padding: 15px 40px;
-  color: #fff;
+  margin: 0;
   text-decoration: none;
   border: none;
   border-radius: 5px;
-  background-color: $primary;
+  box-sizing: border-box;
+  transition: all .2s ease;
+}
 
-  &:hover {
+.btn-primary {
+  background-color: $primary;
+  color: #fff;
+
+  &:hover,
+  &:focus {
     background-color: $primary-hover;
     color: #fff;
   }
@@ -18,5 +26,89 @@
   &:active {
     background-color: $primary-pressed;
     color: #fff;
+  }
+
+  &:disabled {
+    background-color: $disabled;
+    color: #fff;
+  }
+}
+
+.btn-secondary {
+  padding: 14px 39px;
+  border: 1px solid $stroke;
+  background-color: transparent;
+  color: $text-main;
+
+  &:hover,
+  &:focus {
+    border-color: $primary;
+    color: $primary;
+    background-color: transparent;
+  }
+
+  &:active {
+    border-color: $primary-pressed;
+    color: $primary-pressed;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    border-color: $disabled;
+    color: $disabled;
+    background-color: transparent;
+  }
+}
+
+.btn-text,
+.btn-menu {
+  @include h15;
+
+  display: inline;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: $primary;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all .2s ease;
+
+  &:hover,
+  &:focus {
+    color: $primary-hover;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: $primary-pressed;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    color: $disabled;
+    background-color: transparent;
+  }
+}
+
+.btn-menu {
+  font-weight: 300;
+  color: $text-main;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+
+  &:active {
+    color: $primary;
+  }
+}
+
+@include mobile {
+  .btn-primary,
+  .btn-secondary {
+    @include h13;
   }
 }
