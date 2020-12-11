@@ -1136,3 +1136,109 @@ button.swiper-pagination-bullet {
   cursor: -ms-grabbing;
   cursor: grabbing;
 }
+
+body.js__body-no-scroll {
+  overflow: hidden;
+}
+
+.button {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #444;
+  display: inline-block;
+  height: 48px;
+  padding: 15px 40px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #00adef;
+}
+
+.button:hover {
+  background-color: #4687e0;
+  color: #fff;
+}
+
+.button:active {
+  background-color: #095aad;
+  color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+
+.modal.js-show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.modal__overlay::after {
+  content: "";
+  width: 0;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.modal__body {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  max-width: 690px;
+  width: 90%;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  padding-bottom: 200px;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    overflow: hidden;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  .modal__overlay::after {
+    display: none;
+  }
+  .modal__body {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    overflow-y: auto;
+  }
+  .modal.js-show .modal__body {
+    top: 0;
+  }
+}

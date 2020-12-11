@@ -1,0 +1,93 @@
+//РАЗРЕШЕНИЯ
+// Меньше 1280
+@mixin desktop {
+  @media (max-width: $width-desktop - 1px) {
+    @content;
+  }
+}
+
+// Меньше 768
+@mixin tablet {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
+// Меньше 480
+@mixin mobile {
+  @media (max-width: $width-mobile-max - 1px) {
+    @content;
+  }
+}
+
+// ШРИФТЫ
+@mixin h48 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 57px;
+  color: $text-main;
+}
+
+@mixin h31 {
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 37px;
+  color: $text-main;
+}
+
+@mixin h27 {
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 33px;
+  color: $text-main;
+}
+
+@mixin h19 {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 23px;
+  color: $text-main;
+}
+
+@mixin h15 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: $text-main;
+}
+
+@mixin h13 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: $text-main;
+}
+
+@mixin h11 {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: $text-main;
+}
+
+@mixin b15 {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: $text-main;
+}
+
+@mixin b13 {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  color: $text-main;
+}
+
+@mixin b11 {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 16px;
+  color: $text-main;
+}
+

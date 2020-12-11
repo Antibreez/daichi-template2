@@ -14,7 +14,7 @@ let svgstore = require(`gulp-svgstore`);
 let webp = require(`gulp-webp`);
 let posthtml = require(`gulp-posthtml`);
 let include = require(`posthtml-include`);
-const babel = require('gulp-babel');
+let babel = require('gulp-babel');
 let sass = require(`gulp-sass`);
 let postcss = require(`gulp-postcss`);
 let autoprefixer = require(`autoprefixer`);
@@ -120,6 +120,7 @@ gulp.task(`js-vendor`, function () {
 
 gulp.task(`js`, function () {
   return gulp.src([
+    `source/js/components/*.js`,
     `source/js/modules/*.js`,
   ])
     .pipe(plumber())

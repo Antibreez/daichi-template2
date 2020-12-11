@@ -13,4 +13,9 @@
       }
     }
   });
+
+
+
+  const $swiper = $('.swiper-container');
+  console.log($swiper);
 })();

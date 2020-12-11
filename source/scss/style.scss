@@ -1,6 +1,14 @@
 // vendor
 @import "vendor/swiper.scss";
 @import "vendor/lightslider.scss";
+
 // general
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/global.scss";
+
+// components
+@import "components/button.scss";
+@import "components/modal.scss";
 
 // blocks
