@@ -106,9 +106,64 @@
   }
 }
 
+.btn-icon,
+.btn-icon-h {
+  @include h15;
+
+  display: inline-block;
+  height: auto;
+  padding: 78px 15px 15px 15px;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all .2s ease;
+  background-color: #fff;
+  color: $text-main;
+  background-image: url("../img/show-all.svg");
+  background-position: top 15px center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $text-main;
+    background-color: #fff;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  &:disabled {
+    color: $disabled;
+    background-color: #fff;
+    background-image: url("../img/show-all-disabled.svg");
+    box-shadow: none;
+  }
+}
+
+.btn-icon-h {
+  padding: 30px 15px 30px 78px;
+  background-position: left 15px center;
+}
+
 @include mobile {
   .btn-primary,
   .btn-secondary {
     @include h13;
+  }
+
+  .btn-icon {
+    @include h11;
+
+    padding: 61px 15px 15px 15px;
+    background-size: 36px auto;
+  }
+
+  .btn-icon-h {
+    @include h11;
+
+    padding: 25px 15px 25px 66px;
+    background-size: 36px auto;
   }
 }
