@@ -89,6 +89,10 @@
   color: $text-main;
 }
 
+.select2-container .select2-results__option--highlighted[aria-selected] {
+  color: $text-main;
+}
+
 .select2-container span.select2-dropdown {
   border-radius: 5px !important;
   overflow: hidden;

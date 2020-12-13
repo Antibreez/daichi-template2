@@ -81,3 +81,37 @@
   line-height: 16px;
 }
 
+// Сброс стилей кнопки
+@mixin btn-reset {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+//Контейнер
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  @include desktop {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include tablet {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
