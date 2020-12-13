@@ -58,9 +58,12 @@ input.search {
   background-image: url("../img/menu_close.svg");
   background-size: cover;
   transform: translateY(-50%);
+
+  &.js-show {
+    display: block;
+  }
 }
 
-input.search:focus + .search-close,
 input.search.js-inputed + .search-close {
   display: block;
 }

@@ -8,41 +8,41 @@
     });
   });
 
-  // items.forEach((item, id) => {
-  //   item.addEventListener('blur', () => {
-  //     item.parentNode.parentNode.classList.remove('js-focus');
+  items.forEach((item) => {
+    item.addEventListener('blur', () => {
+      item.parentNode.parentNode.classList.remove('js-focus');
 
-  //     if (
-  //       item.value.split(' ').join('') === ''
-  //     ) {
-  //       item.value = '';
-  //     }
+      if (
+        item.value.split(' ').join('') === ''
+      ) {
+        item.value = '';
+      }
 
-  //     if (
-  //       item.value !== ''
-  //       && !item.classList.contains('js-inputed')
-  //     ) {
-  //       item.classList.add('js-inputed');
-  //     }
+      if (
+        item.value !== ''
+        && !item.classList.contains('js-inputed')
+      ) {
+        item.classList.add('js-inputed');
+      }
 
-  //     if (
-  //       item.value === ''
-  //       && item.classList.contains('js-inputed')
-  //     ) {
-  //       item.classList.remove('js-inputed');
-  //     }
-  //   })
-  // });
+      if (
+        item.value === ''
+        && item.classList.contains('js-inputed')
+      ) {
+        item.classList.remove('js-inputed');
+      }
+    })
+  });
 
-  // close.forEach((item) => {
-  //   item.addEventListener('click', () => {
-  //     const search = item.previousElementSibling;
-  //     search.value = '';
-  //     if (
-  //       search.classList.contains('js-inputed')
-  //     ) {
-  //       search.classList.remove('js-inputed');
-  //     }
-  //   })
-  // });
+  close.forEach((item) => {
+    item.addEventListener('click', () => {
+      const search = item.previousElementSibling;
+      search.value = '';
+      if (
+        search.classList.contains('js-inputed')
+      ) {
+        search.classList.remove('js-inputed');
+      }
+    })
+  });
 })();

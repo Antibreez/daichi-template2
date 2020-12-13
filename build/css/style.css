@@ -1773,7 +1773,10 @@ input.search:-ms-input-placeholder {
   background-color: transparent;
 }
 
-input.search:focus + .search-close,
+.search-close.js-show {
+  display: block;
+}
+
 input.search.js-inputed + .search-close {
   display: block;
 }
