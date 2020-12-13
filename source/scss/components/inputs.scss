@@ -1,4 +1,5 @@
 .input-block {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -11,6 +12,10 @@
   }
 
   & .input-note {
+    order: 4;
+  }
+
+  & .input-help {
     order: 3;
   }
 }
@@ -45,11 +50,8 @@ input.input-text {
     opacity: 1;
   }
 
-  &--help {
+  &--icon {
     padding: 0 54px 0 15px;
-    background-image: url("../img/help_default.svg");
-    background-repeat: no-repeat;
-    background-position: right 13px center;
   }
 }
 
@@ -68,6 +70,35 @@ p.input-note {
   margin: 0;
   margin-top: 5px;
   color: $text-minor;
+}
+
+.input-icon {
+  position: absolute;
+  top: 48px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  transform: translateY(-50%);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.input-icon--help {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/help_default.svg");
 }
 
 input.input-text:hover,
@@ -116,6 +147,10 @@ input.input-text:disabled + label.input-label + p.input-note {
   color: $disabled;
 }
 
+input.input-text:disabled + label.input-label + p.input-note + .input-icon--help {
+  background-image: url("../img/help_hover.svg");
+}
+
 @include tablet {
   input.input-text {
     @include b13;
@@ -127,5 +162,9 @@ input.input-text:disabled + label.input-label + p.input-note {
 
   p.input-note {
     @include b11;
+  }
+
+  .input-icon {
+    top: 45px;
   }
 }

@@ -1327,6 +1327,7 @@ body.js__body-no-scroll {
 }
 
 .input-block {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1349,6 +1350,12 @@ body.js__body-no-scroll {
 }
 
 .input-block .input-note {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.input-block .input-help {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
@@ -1386,11 +1393,8 @@ input.input-text:-ms-input-placeholder {
   opacity: 1;
 }
 
-input.input-text--help {
+input.input-text--icon {
   padding: 0 54px 0 15px;
-  background-image: url("../img/help_default.svg");
-  background-repeat: no-repeat;
-  background-position: right 13px center;
 }
 
 label.input-label {
@@ -1408,6 +1412,34 @@ p.input-note {
   margin: 0;
   margin-top: 5px;
   color: #888;
+}
+
+.input-icon {
+  position: absolute;
+  top: 48px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.input-icon:hover, .input-icon:active, .input-icon:focus {
+  background-color: transparent;
+}
+
+.input-icon--help {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/help_default.svg");
 }
 
 input.input-text:hover,
@@ -1454,6 +1486,10 @@ input.input-text:disabled + label.input-label + p.input-note {
   color: #dadada;
 }
 
+input.input-text:disabled + label.input-label + p.input-note + .input-icon--help {
+  background-image: url("../img/help_hover.svg");
+}
+
 @media (max-width: 767px) {
   input.input-text {
     font-weight: 300;
@@ -1469,6 +1505,9 @@ input.input-text:disabled + label.input-label + p.input-note {
     font-weight: 300;
     font-size: 11px;
     line-height: 16px;
+  }
+  .input-icon {
+    top: 45px;
   }
 }
 
@@ -1645,6 +1684,7 @@ input.input-text:disabled + label.input-label + p.input-note {
   visibility: hidden;
   -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
   transition: opacity 0.3s, visibility 0s linear 0.3s;
+  z-index: 100;
 }
 
 .modal.js-show {
