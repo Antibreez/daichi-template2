@@ -10,8 +10,6 @@
 
   items.forEach((item) => {
     item.addEventListener('blur', () => {
-      item.parentNode.parentNode.classList.remove('js-focus');
-
       if (
         item.value.split(' ').join('') === ''
       ) {

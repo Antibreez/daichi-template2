@@ -39,7 +39,8 @@ gulp.task(`copy`, function () {
     `source/css/external.css`,
     `source/css/internal.css`,
     `source/js/external.js`,
-    `source/js/internal.js`
+    `source/js/internal.js`,
+    `source/js/jquery.min.js`
   ], {
     base: `source`
   })
@@ -106,7 +107,6 @@ gulp.task(`imagemin`, function () {
 gulp.task(`js-vendor`, function () {
   return gulp.src([
     `source/js/vendor/*.js`,
-    `source/js/vendor/vendor/*.js`
   ])
     .pipe(plumber())
     .pipe(concat(`vendor.js`))

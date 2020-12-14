@@ -8,174 +8,204 @@
   <link href="css/external.css" rel="stylesheet" async="">
   <link href="css/internal.css" rel="stylesheet" async="">
   <link rel="stylesheet" href="css/style.min.css" type="text/css">
+  <script src="js/jquery.min.js"></script>
 </head>
-  <body class="wrapper">
-    <!--Кнопки-->
-    <h3>Кнопки</h3>
-    <div>
-      <button class="btn-primary">btn-primary</button>
-      <button class="btn-primary" disabled>btn-primary</button>
-      <a class="btn-primary" href="#">btn-primary</a>
+  <body>
+    <div class="wrapper">
+      <!--Меню-->
+      <h3>Меню</h3>
     </div>
-    <div>
-      <button class="btn-secondary">btn-secondary</button>
-      <button class="btn-secondary" disabled>btn-secondary</button>
-      <a class="btn-secondary">btn-secondary</a>
-    </div>
-    <div>
-      <button class="btn-text">btn-text</button>
-      <button class="btn-text" disabled>btn-text</button>
-      <a class="btn-text">btn-text</a>
-    </div>
-    <div>
-      <button class="btn-menu">btn-menu</button>
-      <button class="btn-menu" disabled>btn-menu</button>
-      <a class="btn-menu">btn-menu</a>
-    </div>
-    <div style="padding: 15px;">
-      <button class="btn-icon">btn-icon</button>
-      <button class="btn-icon" disabled>btn-icon</button>
-      <a class="btn-icon">btn-icon</a>
-    </div>
-    <div style="padding: 15px;">
-      <button class="btn-icon-h">btn-icon-h</button>
-      <button class="btn-icon-h" disabled>btn-icon-h</button>
-      <a class="btn-icon-h">btn-icon-h</a>
-    </div>
-    <div>===========================</div>
-    <h3>Input</h3>
-    <div class="input-block" style="margin-bottom: 30px;">
-      <input class="input-text" type="text" placeholder="input-text">
-      <label class="input-label">input-label</label>
-      <p class="input-note">input-note</p>
-    </div>
-    <div class="input-block"  style="margin-bottom: 30px;">
-      <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon">
-      <label class="input-label">input-label</label>
-      <p class="input-note">input-note</p>
-      <button class="input-icon  input-icon--help"></button>
-    </div>
-    <div class="input-block"  style="margin-bottom: 30px;">
-      <input class="input-text  input-text--icon  js-invalid" type="text" placeholder="input-text  input-text--icon">
-      <label class="input-label">input-label</label>
-      <p class="input-note">input-note</p>
-      <button class="input-icon  input-icon--help"></button>
-    </div>
-    <div class="input-block"  style="margin-bottom: 30px;">
-      <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon" disabled>
-      <label class="input-label">input-label</label>
-      <p class="input-note">input-note</p>
-      <button class="input-icon  input-icon--help"></button>
-    </div>
-
-    <div>===========================</div>
-    <h3>Select</h3>
-  <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
-    <select name="options" class="select">
-      <option value="" disabled selected hidden>.select</option>
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-      <option value="option4">Option 4</option>
-    </select>
-    <label class="input-label">input-label</label>
-    <p class="input-note">input-note</p>
-  </div>
-  <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
-    <select name="options" class="select js-invalid">
-      <option value="" disabled selected hidden>.select.js-invalid</option>
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-      <option value="option4">Option 4</option>
-      <option value="option4">Option 4</option>
-      <option value="option4">Option 4</option>
-    </select>
-    <label class="input-label">input-label</label>
-    <p class="input-note">input-note</p>
-  </div>
-  <div class="input-block" style="width: 50%; margin: 0 auto;">
-    <select name="options" class="select" disabled>
-      <option value="" disabled selected hidden>.select:disabled</option>
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-      <option value="option4">Option 4</option>
-      <option value="option4">Option 4</option>
-      <option value="option4">Option 4</option>
-    </select>
-    <label class="input-label">input-label</label>
-    <p class="input-note">input-note</p>
-  </div>
-
-  <div>===========================</div>
-    <h3>Search</h3>
-    <div class="search-block">
-      <div class="search-wrap">
-        <input class="search js-show-result" type="text" placeholder="Поиск">
-        <button class="search-close  js-show"></button>
-        <div class="search-result">
-          <div class="search-item">Daichi FTXB-C</div>
-          <div class="search-item">Daichi DA20EVQ1</div>
-          <div class="search-item">Daichi DA70DQ1-B</div>
-          <div class="search-item">Daichi DA70DQ1-B</div>
+    <div class="menu-pa">
+      <div class="menu-pa__wrapper  wrapper">
+        <div class="menu-pa__container  swiper-container">
+          <ul class="menu-pa__list  swiper-wrapper">
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link  menu-pa__item-link--active" href="#">Личный кабинет</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Мои устройства</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Управление подписками</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Программы обслуживания</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Мои обращения</a>
+            </li>
+            <li class="menu-pa__item  swiper-slide">
+              <a class="menu-pa__item-link" href="#">Профиль</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p><strong>.js-show-result</strong> на <strong>input.search</strong> открывает окно с результатами поиска</p>
-    <p>на мобильном разрешении при фокусе в поле поиска блоку <strong>.search-block</strong> добавляется класс <strong>.js-focus</strong> чтобы поиск показывался на все окно, при окончании поиска класс <strong>.js-focus</strong> должен убираться</p>
-    <p><strong>.js-show</strong> на <strong>.search-close</strong> показывает крестик на поле поиска</p>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <!--Модальное окно-->
-    <button class="modal-button button">Открыть модальное окно</button>
+    <div class="wrapper">
+      <!--Кнопки-->
+      <h3>Кнопки</h3>
+      <div>
+        <button class="btn-primary">btn-primary</button>
+        <button class="btn-primary" disabled>btn-primary</button>
+        <a class="btn-primary" href="#">btn-primary</a>
+      </div>
+      <div>
+        <button class="btn-secondary">btn-secondary</button>
+        <button class="btn-secondary" disabled>btn-secondary</button>
+        <a class="btn-secondary">btn-secondary</a>
+      </div>
+      <div>
+        <button class="btn-text">btn-text</button>
+        <button class="btn-text" disabled>btn-text</button>
+        <a class="btn-text">btn-text</a>
+      </div>
+      <div>
+        <button class="btn-menu">btn-menu</button>
+        <button class="btn-menu" disabled>btn-menu</button>
+        <a class="btn-menu">btn-menu</a>
+      </div>
+      <div style="padding: 15px;">
+        <button class="btn-icon">btn-icon</button>
+        <button class="btn-icon" disabled>btn-icon</button>
+        <a class="btn-icon">btn-icon</a>
+      </div>
+      <div style="padding: 15px;">
+        <button class="btn-icon-h">btn-icon-h</button>
+        <button class="btn-icon-h" disabled>btn-icon-h</button>
+        <a class="btn-icon-h">btn-icon-h</a>
+      </div>
+      <div>===========================</div>
+      <h3>Input</h3>
+      <div class="input-block" style="margin-bottom: 30px;">
+        <input class="input-text" type="text" placeholder="input-text">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon  js-invalid" type="text" placeholder="input-text  input-text--icon">
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
+      <div class="input-block"  style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon" disabled>
+        <label class="input-label">input-label</label>
+        <p class="input-note">input-note</p>
+        <button class="input-icon  input-icon--help"></button>
+      </div>
 
-    <section class="modal">
-      <div class="modal__overlay">
+      <div>===========================</div>
+      <h3>Select</h3>
+    <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
+      <select name="options" class="select">
+        <option value="" disabled selected hidden>.select</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+    <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
+      <select name="options" class="select js-invalid">
+        <option value="" disabled selected hidden>.select.js-invalid</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
+    <div class="input-block" style="width: 50%; margin: 0 auto;">
+      <select name="options" class="select" disabled>
+        <option value="" disabled selected hidden>.select:disabled</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+        <option value="option4">Option 4</option>
+      </select>
+      <label class="input-label">input-label</label>
+      <p class="input-note">input-note</p>
+    </div>
 
-        <div class="modal__body">
-          <button class="modal__close">Close</button>
-          <h1 class="">asdfasfd</h1>
+    <div>===========================</div>
+      <h3>Search</h3>
+      <div class="search-block">
+        <div class="search-wrap">
+          <input class="search js-show-result" type="text" placeholder="Поиск">
+          <button class="search-close  js-show"></button>
+          <div class="search-result">
+            <div class="search-item">Daichi FTXB-C</div>
+            <div class="search-item">Daichi DA20EVQ1</div>
+            <div class="search-item">Daichi DA70DQ1-B</div>
+            <div class="search-item">Daichi DA70DQ1-B</div>
+          </div>
         </div>
       </div>
-    </section>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p><strong>.js-show-result</strong> на <strong>input.search</strong> открывает окно с результатами поиска</p>
+      <p>на мобильном разрешении при фокусе в поле поиска блоку <strong>.search-block</strong> добавляется класс <strong>.js-focus</strong> чтобы поиск показывался на все окно, при окончании поиска класс <strong>.js-focus</strong> должен убираться</p>
+      <p><strong>.js-show</strong> на <strong>.search-close</strong> показывает крестик на поле поиска</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Модальное окно-->
+      <button class="modal-button button">Открыть модальное окно</button>
+
+      <section class="modal">
+        <div class="modal__overlay">
+
+          <div class="modal__body">
+            <button class="modal__close">Close</button>
+            <h1 class="">asdfasfd</h1>
+          </div>
+        </div>
+      </section>
+    </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/external.js"></script>
   <script src="js/internal.js"></script>
   <script src="js/main.js"></script>
-
-  <script>
-  </script>
   </body>
 </html>
