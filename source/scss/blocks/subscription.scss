@@ -14,6 +14,7 @@
   &:hover,
   &:active {
     background-color: #f6f6f6;
+    border: 1px solid $stroke;
   }
 
   &__header {
@@ -98,7 +99,7 @@
   }
 }
 
-@include tablet {
+@include desktop {
   .subscription {
     max-width: 226px;
 
@@ -171,6 +172,34 @@
         display: block;
         margin: 0;
       }
+    }
+  }
+}
+
+@include tablet {
+  .subscription {
+    @include b11;
+
+    max-width: 170px;
+    padding: 15px;
+
+    &__header {
+      &::before {
+        top: 40px;
+      }
+    }
+
+    &__logo {
+      height: 25px;
+      width: auto;
+      margin-bottom: 30px;
+    }
+
+    &__btn-block a {
+      min-width: auto;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }

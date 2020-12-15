@@ -46,32 +46,32 @@
       <h3>Кнопки</h3>
       <div>
         <button class="btn-primary">btn-primary</button>
-        <button class="btn-primary" disabled>btn-primary</button>
+        <button class="btn-primary" disabled="">btn-primary</button>
         <a class="btn-primary" href="#">btn-primary</a>
       </div>
       <div>
         <button class="btn-secondary">btn-secondary</button>
-        <button class="btn-secondary" disabled>btn-secondary</button>
+        <button class="btn-secondary" disabled="">btn-secondary</button>
         <a class="btn-secondary">btn-secondary</a>
       </div>
       <div>
         <button class="btn-text">btn-text</button>
-        <button class="btn-text" disabled>btn-text</button>
+        <button class="btn-text" disabled="">btn-text</button>
         <a class="btn-text">btn-text</a>
       </div>
       <div>
         <button class="btn-menu">btn-menu</button>
-        <button class="btn-menu" disabled>btn-menu</button>
+        <button class="btn-menu" disabled="">btn-menu</button>
         <a class="btn-menu">btn-menu</a>
       </div>
       <div style="padding: 15px;">
         <button class="btn-icon">btn-icon</button>
-        <button class="btn-icon" disabled>btn-icon</button>
+        <button class="btn-icon" disabled="">btn-icon</button>
         <a class="btn-icon">btn-icon</a>
       </div>
       <div style="padding: 15px;">
         <button class="btn-icon-h">btn-icon-h</button>
-        <button class="btn-icon-h" disabled>btn-icon-h</button>
+        <button class="btn-icon-h" disabled="">btn-icon-h</button>
         <a class="btn-icon-h">btn-icon-h</a>
       </div>
       <div>===========================</div>
@@ -81,20 +81,20 @@
         <label class="input-label">input-label</label>
         <p class="input-note">input-note</p>
       </div>
-      <div class="input-block"  style="margin-bottom: 30px;">
+      <div class="input-block" style="margin-bottom: 30px;">
         <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon">
         <label class="input-label">input-label</label>
         <p class="input-note">input-note</p>
         <button class="input-icon  input-icon--help"></button>
       </div>
-      <div class="input-block"  style="margin-bottom: 30px;">
+      <div class="input-block" style="margin-bottom: 30px;">
         <input class="input-text  input-text--icon  js-invalid" type="text" placeholder="input-text  input-text--icon">
         <label class="input-label">input-label</label>
         <p class="input-note">input-note</p>
         <button class="input-icon  input-icon--help"></button>
       </div>
-      <div class="input-block"  style="margin-bottom: 30px;">
-        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon" disabled>
+      <div class="input-block" style="margin-bottom: 30px;">
+        <input class="input-text  input-text--icon" type="text" placeholder="input-text  input-text--icon" disabled="">
         <label class="input-label">input-label</label>
         <p class="input-note">input-note</p>
         <button class="input-icon  input-icon--help"></button>
@@ -104,7 +104,7 @@
       <h3>Select</h3>
     <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
       <select name="options" class="select">
-        <option value="" disabled selected hidden>.select</option>
+        <option value="" disabled="" selected="" hidden="">.select</option>
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -115,7 +115,7 @@
     </div>
     <div class="input-block" style="width: 50%; margin: 0 auto 50px;">
       <select name="options" class="select js-invalid">
-        <option value="" disabled selected hidden>.select.js-invalid</option>
+        <option value="" disabled="" selected="" hidden="">.select.js-invalid</option>
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -127,8 +127,8 @@
       <p class="input-note">input-note</p>
     </div>
     <div class="input-block" style="width: 50%; margin: 0 auto;">
-      <select name="options" class="select" disabled>
-        <option value="" disabled selected hidden>.select:disabled</option>
+      <select name="options" class="select" disabled="">
+        <option value="" disabled="" selected="" hidden="">.select:disabled</option>
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -205,7 +205,6 @@
 
     <div class="wrapper">
       <!--Карточка подписки-->
-      <h3>Карточка подписки</h3>
       <a href="#" class="subscription">
         <div class="subscription__header">
           <img class="subscription__logo  subscription__logo--my-comfort-plus" src="img/my-comfort-plus.svg" alt="Мой комфорт Плюс">
@@ -371,9 +370,6 @@
     </div>
 
     <div class="wrapper">
-
-      <!--Карточка устройства-->
-      <h3>Карточка устройства</h3>
       <a href="#" class="device-card">
         <div class="device-card__img-wrap">
           <img src="img/ftxb-c.png" alt="FTXB-C">
@@ -431,132 +427,9 @@
       </a>
     </div>
 
-    <div class="wrapper">
-      <!--Карточка программы-->
-      <h3>Карточка программы</h3>
-      <a href="#" class="program-card  program-card--climat-online">
-        <div class="program-card__header">
-          <img src="img/climat-online.svg" alt="Климат Онлайн">
-        </div>
-        <div class="program-card__body">
-          <p class="program-card__title">Хотите, чтобы кондиционер служил долго?</p>
-          <p class="program-card__text">Подключите кондиционер к&nbsp;службе дистанционного мониторинга.</p>
-        </div>
-        <object class="program-card__btn-block">
-          <a href="#" class="btn-secondary">Подробнее</a>
-          <a href="#" class="btn-primary"> Оформить</a>
-          <a href="#" class="btn-text"> Оформить</a>
-        </object>
-        <div class="program-card__overlay">
-          <p>
-            Хотите, чтобы кондиционер служил долго?
-          </p>
-        </div>
-      </a>
-
-      <a href="#" class="program-card  program-card--my-comfort">
-        <div class="program-card__header">
-          <img src="img/my-comfort.svg" alt="Мой комфорт">
-        </div>
-        <div class="program-card__body">
-          <p class="program-card__title">Хотите, чтобы кондиционер служил вечно?</p>
-          <p class="program-card__text">Подпишитесь на&nbsp;бесперебойную работу вне&nbsp;зависимости от&nbsp;срока эксплуатации.</p>
-        </div>
-        <object class="program-card__btn-block">
-          <a href="#" class="btn-secondary">Подробнее</a>
-          <a href="#" class="btn-primary"> Оформить</a>
-          <a href="#" class="btn-text"> Оформить</a>
-        </object>
-        <div class="program-card__overlay">
-          <p>
-            Хотите, чтобы кондиционер служил вечно?
-          </p>
-        </div>
-      </a>
-
-      <a href="#" class="program-card  program-card--mobile-control">
-        <div class="program-card__header">
-          <img src="img/mobile-control.svg" alt="Мобильное управление">
-        </div>
-        <div class="program-card__body">
-          <p class="program-card__title">Хотите, чтобы кондиционер стал умным помощником?</p>
-          <p class="program-card__text">Приложение доступно в&nbsp;App&nbsp;Store и&nbsp;Google&nbsp;Play.</p>
-        </div>
-        <object class="program-card__btn-block">
-          <a href="#" class="btn-secondary">Подробнее</a>
-          <a href="#" class="btn-primary"> Оформить</a>
-          <a href="#" class="btn-text"> Оформить</a>
-        </object>
-        <div class="program-card__overlay">
-          <p>
-            Хотите, чтобы кондиционер стал умным помощником?
-          </p>
-        </div>
-      </a>
-
-      <a href="#" class="program-card-mini  program-card-mini--climat-online">
-        <div class="program-card-mini__header">
-          <img src="img/climat-online.svg" alt="Климат Онлайн">
-        </div>
-        <div class="program-card-mini__body">
-          <p class="program-card-mini__title">Хотите, чтобы кондиционер служил долго?</p>
-          <p class="program-card-mini__text">Подключите кондиционер к&nbsp;службе дистанционного мониторинга.</p>
-        </div>
-        <object class="program-card-mini__btn-block">
-          <a href="#" class="btn-text"> Оформить</a>
-        </object>
-        <div class="program-card-mini__overlay">
-        </div>
-      </a>
-
-      <a href="#" class="program-card-mini  program-card-mini--my-comfort">
-        <div class="program-card-mini__header">
-          <img src="img/my-comfort.svg" alt="Мой комфорт">
-        </div>
-        <div class="program-card-mini__body">
-          <p class="program-card-mini__title">Хотите, чтобы кондиционер служил вечно?</p>
-          <p class="program-card-mini__text">Подпишитесь на&nbsp;бесперебойную работу вне&nbsp;зависимости от&nbsp;срока эксплуатации.</p>
-        </div>
-        <object class="program-card-mini__btn-block">
-          <a href="#" class="btn-text">Оформить</a>
-        </object>
-        <div class="program-card-mini__overlay">
-        </div>
-      </a>
-
-      <a href="#" class="program-card-mini  program-card-mini--mobile-control">
-        <div class="program-card-mini__header">
-          <img src="img/mobile-control.svg" alt="Мобильное управление">
-        </div>
-        <div class="program-card-mini__body">
-          <p class="program-card-mini__title">Хотите, чтобы кондиционер стал умным помощником?</p>
-          <p class="program-card-mini__text">Приложение доступно в App&nbsp;Store и
-            Google&nbsp;Play.</p>
-        </div>
-        <object class="program-card-mini__btn-block">
-          <a href="#" class="btn-text">Оформить</a>
-        </object>
-        <div class="program-card-mini__overlay">
-        </div>
-      </a>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
   <script src="js/vendor.min.js"></script>
   <script src="js/external.js"></script>
   <script src="js/internal.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    const $modal = document.querySelector('.modal');
-    const $button = document.querySelector('.modal-button');
-
-
-    const modal = new Modal($button, $modal);
-  </script>
   </body>
 </html>

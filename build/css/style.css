@@ -743,6 +743,10 @@ body.js__body-no-scroll {
   overflow: hidden;
 }
 
+p {
+  margin: 0;
+}
+
 ul {
   margin: 0;
 }
@@ -1450,6 +1454,7 @@ input.search.js-show-result + .search-close + .search-result {
   visibility: hidden;
   -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
   transition: opacity 0.3s, visibility 0s linear 0.3s;
+  z-index: 100;
 }
 
 .modal.js-show {
@@ -1457,7 +1462,6 @@ input.search.js-show-result + .search-close + .search-result {
   visibility: visible;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
-  z-index: 100;
 }
 
 .modal__overlay {
@@ -1604,6 +1608,7 @@ input.search.js-show-result + .search-close + .search-result {
 
 .subscription:hover, .subscription:active {
   background-color: #f6f6f6;
+  border: 1px solid #eee;
 }
 
 .subscription__header {
@@ -1695,7 +1700,7 @@ input.search.js-show-result + .search-close + .search-result {
   margin-left: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1279px) {
   .subscription {
     max-width: 226px;
   }
@@ -1767,5 +1772,474 @@ input.search.js-show-result + .search-close + .search-result {
   .subscription__btn-block a:last-child {
     display: block;
     margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .subscription {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+    max-width: 170px;
+    padding: 15px;
+  }
+  .subscription__header::before {
+    top: 40px;
+  }
+  .subscription__logo {
+    height: 25px;
+    width: auto;
+    margin-bottom: 30px;
+  }
+  .subscription__btn-block a {
+    min-width: auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.device-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 420px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.device-card:hover {
+  background-color: #f6f6f6;
+  border: 1px solid #eee;
+}
+
+.device-card--picked, .device-card--picked:hover {
+  border: 1px solid #00adef;
+  background-color: #E8F8FE;
+}
+
+.device-card--picked::before, .device-card--picked:hover::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/picked.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.device-card--picked .device-card__alert {
+  display: none;
+}
+
+.device-card__img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 117px;
+  min-width: 117px;
+  height: 117px;
+  margin-right: 20px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.device-card__img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.device-card__body {
+  max-width: 253px;
+}
+
+.device-card__name {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 5px;
+  max-width: 90%;
+  color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.device-card__serial-title, .device-card__serial, .device-card__note {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  color: #888;
+}
+
+.device-card__serial {
+  margin-bottom: 5px;
+  color: #444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.device-card__note {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.device-card__alert {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/alert.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.device-card__alert-info {
+  position: absolute;
+  bottom: calc(100% + 25px);
+  right: -15px;
+  width: 350px;
+  padding: 15px;
+  color: #444;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+
+.device-card__alert:hover .device-card__alert-info {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+@media (max-width: 1279px) {
+  .device-card {
+    max-width: 226px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 20px;
+    min-height: 255px;
+  }
+  .device-card__img-wrap {
+    width: 150px;
+    min-width: 150px;
+    height: 90px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .device-card__body {
+    max-width: 100%;
+  }
+  .device-card__name {
+    min-height: 36px;
+    max-height: 36px;
+    max-width: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .device-card__alert-info {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .device-card {
+    max-width: 170px;
+    min-height: 215px;
+    padding: 15px;
+  }
+  .device-card--picked::before, .device-card--picked:hover::before {
+    top: 10px;
+    right: 10px;
+  }
+  .device-card__img-wrap {
+    width: 120px;
+    min-width: 120px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  .device-card__name {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    min-height: 30px;
+    max-height: 30px;
+  }
+  .device-card__serial-title, .device-card__serial, .device-card__note {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .device-card__alert {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.program-card {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 337px;
+  min-height: 245px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.program-card__header {
+  margin-bottom: 30px;
+}
+
+.program-card__title {
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.program-card__text {
+  color: #888;
+}
+
+.program-card__btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+}
+
+.program-card__btn-block a {
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.program-card__btn-block a:nth-child(2) {
+  margin-left: 15px;
+}
+
+.program-card__btn-block a:first-child {
+  margin-left: 0;
+}
+
+.program-card__btn-block a:nth-child(3) {
+  display: none;
+}
+
+.program-card__overlay {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+  padding: 59px 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #eee;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+.program-card__overlay p {
+  max-width: 120px;
+  color: #444;
+}
+
+.program-card:hover {
+  border: 1px solid #eee;
+}
+
+.program-card:hover .program-card__overlay {
+  top: 100%;
+}
+
+.program-card--climat-online .program-card__overlay {
+  background-image: url("../img/climat-online1.jpg");
+}
+
+.program-card--my-comfort .program-card__overlay {
+  background-image: url("../img/my-comfort1.jpg");
+}
+
+.program-card--mobile-control .program-card__overlay {
+  background-image: url("../img/mobile-control1.jpg");
+}
+
+.program-card-mini {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 220px;
+  min-height: 284px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.program-card-mini__header {
+  margin-bottom: 30px;
+}
+
+.program-card-mini__title {
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.program-card-mini__text {
+  color: #888;
+}
+
+.program-card-mini__btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+}
+
+.program-card-mini__overlay {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+  padding: 59px 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+  background-color: #eee;
+}
+
+.program-card-mini:hover {
+  border: 1px solid #eee;
+}
+
+.program-card-mini:hover .program-card-mini__overlay {
+  top: 100%;
+}
+
+.program-card-mini--climat-online .program-card-mini__overlay {
+  background-image: url("../img/climat-online2.jpg");
+}
+
+.program-card-mini--my-comfort .program-card-mini__overlay {
+  background-image: url("../img/my-comfort2.jpg");
+}
+
+.program-card-mini--mobile-control .program-card-mini__overlay {
+  background-image: url("../img/mobile-control2.jpg");
+}
+
+@media (max-width: 1279px) {
+  .program-card {
+    max-width: 226px;
+    min-height: 284px;
+    padding: 20px;
+  }
+  .program-card__btn-block a:first-child, .program-card__btn-block a:nth-child(2) {
+    display: none;
+  }
+  .program-card__btn-block a:nth-child(3) {
+    padding: 0;
+    display: block;
+  }
+  .program-card__overlay {
+    background-position: center;
+  }
+  .program-card__overlay p {
+    display: none;
+  }
+  .program-card:hover .program-card__overlay,
+  .program-card-mini:hover .program-card-mini__overlay {
+    top: 70px;
+  }
+  .program-card--climat-online .program-card__overlay {
+    background-image: url("../img/climat-online2.jpg");
+  }
+  .program-card--my-comfort .program-card__overlay {
+    background-image: url("../img/my-comfort2.jpg");
+  }
+  .program-card--mobile-control .program-card__overlay {
+    background-image: url("../img/mobile-control2.jpg");
+  }
+  .program-card-mini {
+    max-width: 226px;
+  }
+}
+
+@media (max-width: 767px) {
+  .program-card,
+  .program-card-mini {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+    max-width: 170px;
+    min-height: 230px;
+    padding: 15px;
+  }
+  .program-card__header,
+  .program-card-mini__header {
+    margin-bottom: 20px;
+  }
+  .program-card__overlay,
+  .program-card-mini__overlay {
+    top: 60px;
+    height: calc(100% - 60px);
+  }
+  .program-card:hover .program-card__overlay,
+  .program-card-mini:hover .program-card-mini__overlay {
+    top: 60px;
   }
 }

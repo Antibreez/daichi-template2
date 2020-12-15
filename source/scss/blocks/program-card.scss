@@ -1,0 +1,228 @@
+.program-card {
+  @include b13;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 337px;
+  min-height: 245px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #eee;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    color: $text-main;
+  }
+
+  &__text {
+    color: $text-minor;
+  }
+
+  &__btn-block {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__btn-block a {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-grow: 1;
+
+    &:nth-child(2) {
+      margin-left: 15px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 59px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #eee;
+    transition: top 0.3s;
+
+    & p {
+      max-width: 120px;
+      color: $text-main;
+    }
+  }
+
+  &:hover {
+    border: 1px solid #eee;
+  }
+
+  &:hover .program-card__overlay {
+    top: 100%;
+  }
+}
+
+.program-card--climat-online  .program-card__overlay {
+  background-image: url("../img/climat-online1.jpg");
+}
+
+.program-card--my-comfort  .program-card__overlay {
+  background-image: url("../img/my-comfort1.jpg");
+}
+
+.program-card--mobile-control  .program-card__overlay {
+  background-image: url("../img/mobile-control1.jpg");
+}
+
+.program-card-mini {
+  @include b13;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+  min-height: 284px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #eee;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    color: $text-main;
+  }
+
+  &__text {
+    color: $text-minor;
+  }
+
+  &__btn-block {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 59px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: top 0.3s;
+    background-color: #eee;
+  }
+
+  &:hover {
+    border: 1px solid #eee;
+  }
+
+  &:hover .program-card-mini__overlay {
+    top: 100%;
+  }
+}
+
+.program-card-mini--climat-online .program-card-mini__overlay {
+  background-image: url("../img/climat-online2.jpg");
+}
+
+.program-card-mini--my-comfort .program-card-mini__overlay {
+  background-image: url("../img/my-comfort2.jpg");
+}
+
+.program-card-mini--mobile-control .program-card-mini__overlay {
+  background-image: url("../img/mobile-control2.jpg");
+}
+
+@include desktop {
+  .program-card {
+    max-width: 226px;
+    min-height: 284px;
+    padding: 20px;
+
+    &__btn-block a {
+      &:first-child,
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        padding: 0;
+        display: block;
+      }
+    }
+
+    &__overlay {
+      background-position: center;
+
+      & p {
+        display: none
+      }
+    }
+  }
+
+  .program-card:hover .program-card__overlay,
+  .program-card-mini:hover .program-card-mini__overlay {
+    top: 70px;
+  }
+
+  .program-card--climat-online  .program-card__overlay {
+    background-image: url("../img/climat-online2.jpg");
+  }
+
+  .program-card--my-comfort  .program-card__overlay {
+    background-image: url("../img/my-comfort2.jpg");
+  }
+
+  .program-card--mobile-control  .program-card__overlay {
+    background-image: url("../img/mobile-control2.jpg");
+  }
+
+  .program-card-mini {
+    max-width: 226px;
+  }
+}
+
+@include tablet {
+  .program-card,
+  .program-card-mini {
+    @include b11;
+
+    max-width: 170px;
+    min-height: 230px;
+    padding: 15px;
+
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    &__overlay {
+      top: 60px;
+      height: calc(100% - 60px);
+    }
+  }
+
+  .program-card:hover .program-card__overlay,
+  .program-card-mini:hover .program-card-mini__overlay {
+    top: 60px;
+  }
+}

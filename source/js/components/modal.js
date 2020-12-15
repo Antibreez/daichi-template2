@@ -62,9 +62,5 @@
     window.addEventListener('resize', debounce(this.onResize));
   }
 
-  const $modal = document.querySelector('.modal');
-  const $button = document.querySelector('.modal-button');
-
-
-  const modal = new Modal($button, $modal);
+  window.Modal = Modal;
 })();
