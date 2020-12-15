@@ -1,0 +1,9 @@
+.account {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 75px;
+
+  &__left-side {
+    width: 690px;
+  }
+}
