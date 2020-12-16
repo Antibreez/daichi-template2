@@ -5,5 +5,137 @@
 
   &__left-side {
     width: 690px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__mobile-title {
+    display: none;
+  }
+
+  &__to-all {
+    @include h31;
+    position: relative;
+    padding-right: 34px;
+    color: $text-main;
+    border-bottom: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 0;
+
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/nav-arrow2_default.svg");
+      background-size: cover;
+      transition: all .2s ease;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:hover::after {
+      background-image: url("../img/nav-arrow2_hover-link.svg");
+    }
+
+    & span:last-child {
+      display: none;
+    }
+  }
+
+  &__subscriptions {
+    margin-bottom: 50px;
+  }
+
+  &__banner {
+    width: 100%;
+    min-height: 320px;
+    padding: 30px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    background-size: cover;
+
+    &--app {
+      background-image: url("../img/banner-app-bg.jpg");
+    }
+  }
+
+  &__banner-top {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__banner-icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    background-image: url("../img/app-logo.svg");
+  }
+
+  &__banner-subtitle {
+    @include b13;
+    color: $text-minor;
+  }
+
+  &__banner-title {
+    @include h27;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__banner-desc {
+    @include b15;
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: $text-main;
+  }
+}
+
+@include desktop {
+  .account {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__title {
+      width: 100%;
+    }
+
+    &__mobile-title {
+      @include h31;
+
+      display: block;
+      color: $text-main;
+    }
+
+    &__to-all {
+      padding-right: 0;
+
+      & span:first-child {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      & span:last-child {
+        @include h15;
+
+        display: inline;
+        color: $primary;
+      }
+    }
+
+    &__left-side {
+      width: 100%;
+    }
   }
 }
