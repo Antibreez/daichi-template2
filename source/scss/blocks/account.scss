@@ -54,49 +54,6 @@
   &__subscriptions {
     margin-bottom: 50px;
   }
-
-  &__banner {
-    width: 100%;
-    min-height: 320px;
-    padding: 30px;
-    background-color: #f6f6f6;
-    border-radius: 5px;
-    background-size: cover;
-
-    &--app {
-      background-image: url("../img/banner-app-bg.jpg");
-    }
-  }
-
-  &__banner-top {
-    display: flex;
-    margin-bottom: 15px;
-  }
-
-  &__banner-icon {
-    width: 48px;
-    height: 48px;
-    margin-right: 15px;
-    background-image: url("../img/app-logo.svg");
-  }
-
-  &__banner-subtitle {
-    @include b13;
-    color: $text-minor;
-  }
-
-  &__banner-title {
-    @include h27;
-    margin: 0;
-    color: $text-main;
-  }
-
-  &__banner-desc {
-    @include b15;
-    max-width: 500px;
-    margin-bottom: 20px;
-    color: $text-main;
-  }
 }
 
 @include desktop {
@@ -106,6 +63,7 @@
 
     &__title {
       width: 100%;
+      align-items: flex-end;
     }
 
     &__mobile-title {
@@ -116,6 +74,7 @@
     }
 
     &__to-all {
+      @include h15;
       padding-right: 0;
 
       & span:first-child {
@@ -127,7 +86,6 @@
       }
 
       & span:last-child {
-        @include h15;
 
         display: inline;
         color: $primary;
@@ -136,6 +94,24 @@
 
     &__left-side {
       width: 100%;
+    }
+  }
+}
+
+@include tablet {
+  .account {
+    padding-top: 50px;
+
+    &__mobile-title {
+      @include h19;
+    }
+
+    &__to-all {
+      & span:last-child {
+
+        display: inline;
+        color: $primary;
+      }
     }
   }
 }

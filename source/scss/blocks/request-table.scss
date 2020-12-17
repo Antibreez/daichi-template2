@@ -1,0 +1,20 @@
+.request-table {
+  border: 1px solid $stroke;
+  border-radius: 5px;
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__date {
+
+  }
+
+  &__info {
+    &:hover {
+      cursor: pointer;
+      background-color: pink;
+    }
+  }
+}

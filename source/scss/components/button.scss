@@ -148,7 +148,7 @@
   background-position: left 15px center;
 }
 
-@include mobile {
+@include tablet {
   .btn-primary,
   .btn-secondary {
     @include h13;

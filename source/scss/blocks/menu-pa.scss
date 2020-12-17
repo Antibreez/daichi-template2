@@ -38,11 +38,16 @@
   .menu-pa {
     &__wrapper {
       padding-right: 0;
+      padding-left: 0;
     }
 
     &__item {
       &:nth-child(n) {
         margin-right: 35px;
+      }
+
+      &:first-child {
+        margin-left: 30px;
       }
     }
   }
@@ -53,6 +58,10 @@
     &__item {
       &:nth-child(n) {
         margin-right: 25px;
+      }
+
+      &:first-child {
+        margin-left: 15px;
       }
     }
 

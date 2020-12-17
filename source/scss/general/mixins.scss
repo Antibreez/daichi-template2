@@ -6,6 +6,13 @@
   }
 }
 
+// Больше 1280
+@mixin desktop-only {
+  @media (min-width: $width-desktop) {
+    @content;
+  }
+}
+
 // Меньше 768
 @mixin tablet {
   @media (max-width: $width-tablet - 1px) {

@@ -1,0 +1,79 @@
+.banner {
+  width: 100%;
+  margin-bottom: 50px;
+
+  &__body {
+    width: 100%;
+    min-height: 320px;
+    padding: 30px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    background-size: cover;
+
+    &--app {
+      background-image: url("../img/banner-app-bg.jpg");
+    }
+  }
+
+  &__top {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    background-image: url("../img/app-logo.svg");
+  }
+
+  &__subtitle {
+    @include b13;
+    color: $text-minor;
+  }
+
+  &__title {
+    @include h27;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__desc {
+    @include b15;
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: $text-minor;
+  }
+}
+
+@include desktop-only {
+  .banner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@include tablet {
+  .banner {
+    &__body {
+      background-position: center;
+    }
+
+    &__title-block {
+      padding-top: 5px;
+    }
+
+    &__subtitle {
+      @include b11;
+    }
+
+    &__title {
+      @include h19;
+    }
+
+    &__desc {
+      @include b13;
+      max-width: 370px;
+    }
+  }
+}
