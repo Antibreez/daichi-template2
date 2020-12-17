@@ -2715,7 +2715,14 @@ input.search.js-show-result + .search-close + .search-result {
   }
 }
 
-.request-table {
+@media (max-width: 767px) {
+  .requests-account__top {
+    padding: 0 15px;
+    margin-bottom: 25px;
+  }
+}
+
+.request-table__wrapper {
   border: 1px solid #eee;
   border-radius: 5px;
 }
@@ -2723,9 +2730,94 @@ input.search.js-show-result + .search-close + .search-result {
 .request-table__table {
   width: 100%;
   border-collapse: collapse;
+  background-color: #fff;
+}
+
+.request-table__date {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 10px 15px;
+  color: #888;
+  background-color: #f6f6f6;
+}
+
+.request-table__info {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .request-table__info:hover {
   cursor: pointer;
-  background-color: pink;
+  background-color: #f6f6f6;
+}
+
+.request-table__title {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 15px 15px 0 15px;
+  color: #444;
+}
+
+.request-table__price {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 15px 15px 0 15px;
+  text-align: right;
+  color: #444;
+}
+
+.request-table__device {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  padding: 5px 15px 15px 15px;
+  color: #888;
+}
+
+.request-table__status {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  padding: 5px 15px 15px 15px;
+  text-align: right;
+  color: #888;
+}
+
+.request-table__status--planned {
+  color: #888;
+}
+
+.request-table__status--done {
+  color: #00adef;
+}
+
+@media (min-width: 1280px) {
+  .request-table {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .request-table {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .request-table__wrapper {
+    border: none;
+    border-radius: 0;
+  }
+  .request-table__date, .request-table__title, .request-table__price {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .request-table__device, .request-table__status {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+  }
 }

@@ -19,3 +19,12 @@
     display: none;
   }
 }
+
+@include tablet {
+  .requests-account {
+    &__top {
+      padding: 0 15px;
+      margin-bottom: 25px;
+    }
+  }
+}

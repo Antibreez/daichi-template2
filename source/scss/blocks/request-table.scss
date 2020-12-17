@@ -1,20 +1,93 @@
 .request-table {
-  border: 1px solid $stroke;
-  border-radius: 5px;
+
+  &__wrapper {
+    border: 1px solid $stroke;
+    border-radius: 5px;
+  }
 
   &__table {
     width: 100%;
     border-collapse: collapse;
+    background-color: #fff;
   }
 
   &__date {
-
+    @include h13;
+    padding: 10px 15px;
+    color: $text-minor;
+    background-color: #f6f6f6;
   }
 
   &__info {
+    transition: all 0.3s;
+
     &:hover {
       cursor: pointer;
-      background-color: pink;
+      background-color: #f6f6f6;
+    }
+  }
+
+  &__title {
+    @include h13;
+    padding: 15px 15px 0 15px;
+    color: $text-main;
+  }
+
+  &__price {
+    @include h13;
+    padding: 15px 15px 0 15px;
+    text-align: right;
+    color: $text-main;
+  }
+
+  &__device {
+    @include b13;
+    padding: 5px 15px 15px 15px;
+    color: $text-minor;
+  }
+
+  &__status {
+    @include b13;
+    padding: 5px 15px 15px 15px;
+    text-align: right;
+    color: $text-minor;
+
+    &--planned {
+      color: $text-minor;
+    }
+
+    &--done {
+      color: $primary;
+    }
+  }
+}
+
+@include desktop-only {
+  .request-table {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@include tablet {
+  .request-table {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__wrapper {
+      border: none;
+      border-radius: 0;
+    }
+
+    &__date,
+    &__title,
+    &__price {
+      @include h11;
+    }
+
+    &__device,
+    &__status {
+      @include b11;
     }
   }
 }

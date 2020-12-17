@@ -250,50 +250,153 @@
               </a>
             </div>
           </div>
-          <div class="requests-account__table  request-table">
-            <table class="request-table__table">
-              <tr class="request-table__date">
-                <td colspan="2">25.11.2021</td>
-              </tr>
-              <tbody class="request-table__info">
+          <div class="requests-account__table  request-table  wrapper">
+            <div class="request-table__wrapper">
+              <table class="request-table__table">
+                <!--Дата-->
                 <tr>
-                  <td>Плановое техническое обслуживание | Мой комфорт</td>
-                  <td>2000 руб.</td>
+                  <td colspan="2" class="request-table__date">25.11.2021</td>
                 </tr>
+                <!--Обращение-->
+                <tbody class="request-table__info">
+                  <tr>
+                    <td class="request-table__title">Плановое техническое обслуживание&nbsp;|&nbsp;Мой&nbsp;комфорт</td>
+                    <td class="request-table__price">2000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td class="request-table__device">Daikin FTXB-C</td>
+                    <td class="request-table__status  request-table__status--planned">Запланировано</td>
+                  </tr>
+                </tbody>
+
+                <!--Дата-->
                 <tr>
-                  <td>Плановое техническое обслуживание | Мой комфорт</td>
-                  <td>2000 руб.</td>
+                  <td colspan="2" class="request-table__date">07.11.2020</td>
                 </tr>
-              </tbody>
-            </table>
+                <!--Обращение-->
+                <tbody class="request-table__info">
+                  <tr>
+                    <td class="request-table__title">Программа обслуживания «Мой&nbsp;комфорт»&nbsp;|&nbsp;Тариф&nbsp;2&nbsp;год</td>
+                    <td class="request-table__price">2300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td class="request-table__device">Daikin FTXB-C</td>
+                    <td class="request-table__status  request-table__status--done">Выполнено</td>
+                  </tr>
+                </tbody>
+
+                <!--Дата-->
+                <tr>
+                  <td colspan="2" class="request-table__date">07.11.2020</td>
+                </tr>
+                <!--Обращение-->
+                <tbody class="request-table__info">
+                  <tr>
+                    <td class="request-table__title">Программа обслуживания «Климат&nbsp;онлайн»</td>
+                    <td class="request-table__price">1000 руб.</td>
+                  </tr>
+                  <tr>
+                    <td class="request-table__device">Daikin FTXB-C</td>
+                    <td class="request-table__status  request-table__status--done">Выполнено</td>
+                  </tr>
+                </tbody>
+                <tbody class="request-table__info">
+                  <tr>
+                    <td class="request-table__title">Программа обслуживания «Мобильное&nbsp;управление»</td>
+                    <td class="request-table__price">5000 руб..</td>
+                  </tr>
+                  <tr>
+                    <td class="request-table__device">Daikin FTXB-C</td>
+                    <td class="request-table__status  request-table__status--done">Выполнено</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!--Модальные окна обращений-->
+          <div class="request-table__modals-block">
+            <div class="request-table__modal  modal">
+              <div class="modal__overlay">
+                <div class="modal__body">
+                  <button class="modal__close"></button>
+                  <h1 class="modal__title">Заголовок модалки</h1>
+                  <p class="modal__desc">
+                    Описательный текст
+                  </p>
+                  <div class="modal__content">
+                    содержимое
+                  </div>
+                  <div class="modal__btn-block">
+                    <button class="modal__btn-item  btn-primary">Кнопка</button>
+                    <button class="modal__btn-item  btn-secondary">Кнопка</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="request-table__modal  modal">
+              <div class="modal__overlay">
+                <div class="modal__body">
+                  <button class="modal__close"></button>
+                  <h1 class="modal__title">Заголовок модалки</h1>
+                  <p class="modal__desc">
+                    Описательный текст
+                  </p>
+                  <div class="modal__content">
+                    содержимое
+                  </div>
+                  <div class="modal__btn-block">
+                    <button class="modal__btn-item  btn-primary">Кнопка</button>
+                    <button class="modal__btn-item  btn-secondary">Кнопка</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="request-table__modal  modal">
+              <div class="modal__overlay">
+                <div class="modal__body">
+                  <button class="modal__close"></button>
+                  <h1 class="modal__title">Заголовок модалки</h1>
+                  <p class="modal__desc">
+                    Описательный текст
+                  </p>
+                  <div class="modal__content">
+                    содержимое
+                  </div>
+                  <div class="modal__btn-block">
+                    <button class="modal__btn-item  btn-primary">Кнопка</button>
+                    <button class="modal__btn-item  btn-secondary">Кнопка</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="request-table__modal  modal">
+              <div class="modal__overlay">
+                <div class="modal__body">
+                  <button class="modal__close"></button>
+                  <h1 class="modal__title">Заголовок модалки</h1>
+                  <p class="modal__desc">
+                    Описательный текст
+                  </p>
+                  <div class="modal__content">
+                    содержимое
+                  </div>
+                  <div class="modal__btn-block">
+                    <button class="modal__btn-item  btn-primary">Кнопка</button>
+                    <button class="modal__btn-item  btn-secondary">Кнопка</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
       <div class="accont__right-side">
 
       </div>
-
-      <section class="modal">
-        <div class="modal__overlay">
-
-          <div class="modal__body">
-            <button class="modal__close"></button>
-            <h1 class="modal__title">Заголовок модалки</h1>
-            <p class="modal__desc">
-              Описательный текст, которого может не быть. Такой текст может занимать несколько строчек.
-            </p>
-            <div class="modal__content">
-              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
-              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
-              содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>содержимое<br>
-            </div>
-            <div class="modal__btn-block">
-              <button class="modal__btn-item  btn-primary">Кнопка</button>
-              <button class="modal__btn-item  btn-secondary">Кнопка</button>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <script src="js/vendor.min.js"></script>
