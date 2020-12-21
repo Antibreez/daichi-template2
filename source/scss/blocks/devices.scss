@@ -1,0 +1,66 @@
+.devices {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  &__nav-block {
+    display: flex;
+  }
+
+  &__nav-prev,
+  &__nav-next {
+    position: static;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+
+    background-image: url("../img/nav-arrow_default.svg");
+    transition: all 0.3s;
+
+    &::after {
+      display: none;
+    }
+
+    &:not(.swiper-button-disabled):hover {
+      background-image: url("../img/nav-arrow_hover.svg");
+    }
+  }
+
+  &__nav-prev {
+    margin-right: 10px;
+    transform: rotate(180deg);
+  }
+
+  &__slider {
+    max-height: 480px;
+  }
+
+  &__wrapper {
+    max-height: 480px;
+  }
+}
+
+@include desktop {
+  .devices {
+    &__top {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__nav-block {
+      display: none;
+    }
+  }
+}
+
+@include tablet {
+  .devices {
+    &__top {
+      padding: 0 15px;
+      margin-bottom: 25px;
+    }
+  }
+}
