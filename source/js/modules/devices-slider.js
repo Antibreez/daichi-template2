@@ -36,6 +36,8 @@
       breakpoints: {
         768: {
           spaceBetween: 15,
+          slidesPerColumn: 1,
+          slidesPerView: 'auto',
         },
         1280: {
           spaceBetween: 15,

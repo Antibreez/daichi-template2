@@ -53,6 +53,18 @@
     &__nav-block {
       display: none;
     }
+
+    &__slider {
+      max-height: none;
+    }
+
+    &__wrapper {
+      max-height: none;
+    }
+
+    &__item {
+      margin-top: 0 !important;
+    }
   }
 }
 

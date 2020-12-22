@@ -2899,6 +2899,15 @@ input.search.js-show-result + .search-close + .search-result {
   .devices__nav-block {
     display: none;
   }
+  .devices__slider {
+    max-height: none;
+  }
+  .devices__wrapper {
+    max-height: none;
+  }
+  .devices__item {
+    margin-top: 0 !important;
+  }
 }
 
 @media (max-width: 767px) {
